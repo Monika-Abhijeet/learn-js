@@ -21,10 +21,28 @@
           document.getElementById("demo").innerHTML = "You pressed cancel";
         }
       }
+
+      function showDetais(e) {
+        e.preventDefault();
+        let fname = document.forms["nameForm"]["fname"].value;
+        document.getElementById("form-demo").innerHTML = fname;
+      }
+
+      function handleSubmit() {
+        let firstName = document.forms["myForm"]["fname"].value;
+        let lastName = document.forms["myForm"]["lname"].value;
+
+        if (firstName == "" || lastName == "") {
+          alert("name must be filled");
+          return false;
+        } else {
+          alert(`firstname is ${firstName} and lastname is ${lastName}`);
+          return false;
+        }
+      }
     </script>
   </head>
   <body>
-    <!-- alert, prompt and confirm -->
     <h1>Demo of user interaction with alert,prompt and confirm</h1>
     <h3 id="demo"></h3>
     <button onClick="alert('This is a demo of alert interaction')">
@@ -32,5 +50,13 @@
     </button>
     <button onClick="promptDemo()">Prompt</button>
     <button onClick="confirmDemo()">Confirm</button>
+    <br />
+    <br />
+    <form name="myForm" onsubmit="handleSubmit()">
+      <div>FirstName: <input type="text" name="fname" /></div>
+      <div>LastName: <input type="text" name="lname" /></div>
+      <button type="submit">Submit</button>
+    </form>
+    <h2 id="form-demo"></h2>
   </body>
 </html>

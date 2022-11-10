@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User forms</title>
+    <script>
+      function promptDemo() {
+        var name = prompt("Please Enter your name");
+        if (name !== null) {
+          document.getElementById(
+            "demo"
+          ).innerHTML = `Hello ${name} ! How are you doing?`;
+        }
+      }
+
+      function confirmDemo() {
+        let text = "Are you sure you want to quit?";
+        if (confirm(text) === true) {
+          document.getElementById("demo").innerHTML =
+            "You pressed Ok and it will quit application!!";
+        } else {
+          document.getElementById("demo").innerHTML = "You pressed cancel";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <!-- alert, prompt and confirm -->
+    <h1>Demo of user interaction with alert,prompt and confirm</h1>
+    <h3 id="demo"></h3>
+    <button onClick="alert('This is a demo of alert interaction')">
+      Alert
+    </button>
+    <button onClick="promptDemo()">Prompt</button>
+    <button onClick="confirmDemo()">Confirm</button>
+  </body>
+</html>

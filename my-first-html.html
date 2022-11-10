@@ -3,13 +3,17 @@
   <head>
     <title>My first HTML</title>
     <link rel="stylesheet" href="./my-first-css.css" />
-    <script src="../javascript/my-first-javascript.js"></script>
-    <!-- <script>
-      alert("I am here");
-    </script> -->
+    <script src="./my-first-javascript.js"></script>
+    <script>
+      function changeName() {
+        document.getElementById("name").innerHTML = "Priyanka";
+      }
+    </script>
   </head>
 
   <body>
-    <h1 class="heading">hello Everyone</h1>
+    <h1 id="name">Monika</h1>
+    <p>This is description about monika</p>
+    <button onclick="changeName()">Change name</button>
   </body>
 </html>

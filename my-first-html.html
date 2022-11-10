@@ -43,6 +43,41 @@
         let sum = num1 + num2;
         document.getElementById("sum").innerHTML = sum;
       }
+
+      function multiply(num1, num2) {
+        let product = num1 * num2;
+        return product;
+      }
+
+      let num1 = 10;
+      num1 = 20;
+      {
+        let num2 = 5;
+        console.log("inside local scope", num2);
+      }
+      {
+        let num2 = 10;
+        console.log("inside second block", num2);
+      }
+      console.log("inside global scope", num1);
+
+      let result = multiply(10, 5);
+      let newResult = result + 20;
+      console.log("result of new multiply and add is", newResult);
+
+      // arrays
+
+      const fruits = ["Apple", "Mango", `watermelon`];
+      console.log(fruits[2]);
+
+      const person = {
+        firstName: "monika",
+        lastName: "Abhijeet",
+        isLogged: true,
+        phoneNumber: 123456789,
+      };
+
+      console.log(person.lastName);
     </script>
 
     <!-- + - * / = -->

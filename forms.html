@@ -3,6 +3,38 @@
   <head>
     <title>User forms</title>
     <script>
+      let fname = "Monika",
+        lname = "Abhijeet",
+        age = 28;
+      // regular string
+      console.log(
+        "Hi, Good morning " + fname + " " + lname + " your age is " + age
+      );
+      //   string literal
+      console.log(`Hi, Good morning ${fname} ${lname} and your age is ${age}`);
+      // using regular string
+      // regular function
+      function addNumbers() {
+        let num1 = document.getElementById("num1").value;
+        let num2 = document.getElementById("num2").value;
+        alert(parseInt(num1) + parseInt(num2));
+      }
+      // arrow function
+      const sumOfNumbers = () => {
+        let num1 = document.getElementById("num1").value;
+        let num2 = document.getElementById("num2").value;
+        alert(parseInt(num1) + parseInt(num2));
+      };
+      // regular function
+      function multiply(num1, num2) {
+        return num1 * num2;
+      }
+      let product = multiply(4, 10);
+      console.log("product using reg function is", product);
+      // arrow function
+      const mul = (num1, num2) => num1 * num2;
+      console.log("product using arrow function", mul(4, 10));
+
       function promptDemo() {
         var name = prompt("Please Enter your name");
         if (name !== null) {
@@ -41,6 +73,7 @@
         }
       }
     </script>
+    <noscript>Javascript is not supported on your browser</noscript>
   </head>
   <body>
     <h1>Demo of user interaction with alert,prompt and confirm</h1>
@@ -58,5 +91,8 @@
       <button type="submit">Submit</button>
     </form>
     <h2 id="form-demo"></h2>
+    <input type="number" id="num1" />
+    <input type="number" id="num2" />
+    <button onclick="addNumbers()">Add</button>
   </body>
 </html>

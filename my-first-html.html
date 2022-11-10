@@ -4,16 +4,60 @@
     <title>My first HTML</title>
     <link rel="stylesheet" href="./my-first-css.css" />
     <script src="./my-first-javascript.js"></script>
+
     <script>
+      const name = "Monika";
+
       function changeName() {
+        // alert("name changed");
         document.getElementById("name").innerHTML = "Priyanka";
+        console.log("name changed to priyanka");
+      }
+      function printMyPage() {
+        window.print();
+      }
+
+      function showName() {
+        alert(name);
+      }
+      let num = 10;
+      // for loop
+      for (i = 0; i < num; i++) {
+        console.log(i);
+      }
+      // if else loop
+      if (num < 0) {
+        console.log("Negative number");
+      } else {
+        console.log("positive number");
+      }
+      // comments
+      let firstName = "Monika";
+      console.log("firstname is", firstName);
+      // single line comment => variable declaration should start with alphabets, $ or _
+      /* Multi line comment
+      variable names are case sensitive and
+      they should be written in camelcase*/
+
+      function addNumbers(num1, num2) {
+        let sum = num1 + num2;
+        document.getElementById("sum").innerHTML = sum;
       }
     </script>
+
+    <!-- + - * / = -->
   </head>
 
   <body>
     <h1 id="name">Monika</h1>
     <p>This is description about monika</p>
     <button onclick="changeName()">Change name</button>
+    <button onclick="printMyPage()">print page</button>
+    <button onclick="showName()">show name</button>
+    <button onclick="addNumbers(10,30)">Add</button>
+    <h2>
+      The result of addition is :
+      <p id="sum"></p>
+    </h2>
   </body>
 </html>

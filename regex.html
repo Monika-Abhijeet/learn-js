@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Regex demo</title>
+    <script>
+      let text = `The fat cat Vat ran down the street. The cat was cute $at dat fc 9at.
+      It was searching for a mouse to eaaaaaat. cat couldnt find a mouse`;
+      let pattern = /.at/gi;
+      console.log(text.search(pattern));
+
+      function isEmailValid() {
+let email = document.getElementById('email').value;
+console.log(email);
+        let pattern = /[a-z]+@[a-z]+.com/
+        console.log(pattern.test("monu@gmail.com"));
+      }
+    </script>
+    <script src="classes.js"></script>
+  </head>
+  <body>
+  
+  <div>
+
+  email: <input type="email" id="email">
+<button onclick="isEmailValid()" >Submit</button></body></div>
+</html>
+
+^(\+0?1\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$
+123-345-6666
+876-765-8888
+876 765 8888

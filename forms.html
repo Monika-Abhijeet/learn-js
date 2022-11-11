@@ -72,6 +72,12 @@
           return false;
         }
       }
+
+      fetch("https://jsonplaceholder.typicode.com/users")
+        .then((data) => {
+          return data.json();
+        })
+        .then((res) => console.log(res));
     </script>
     <noscript>Javascript is not supported on your browser</noscript>
   </head>
@@ -94,5 +100,6 @@
     <input type="number" id="num1" />
     <input type="number" id="num2" />
     <button onclick="addNumbers()">Add</button>
+    <button onclick="sumOfNumbers()">add arrow</button>
   </body>
 </html>
